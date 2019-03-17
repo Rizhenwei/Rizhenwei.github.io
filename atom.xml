@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rizhenwei.github.io/"/>
-  <updated>2019-03-17T06:42:32.006Z</updated>
+  <updated>2019-03-17T06:47:48.450Z</updated>
   <id>https://rizhenwei.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rizhenwei.github.io/2019/03/17/%E5%AE%B9%E5%99%A8%E6%9E%B6%E6%9E%84/"/>
     <id>https://rizhenwei.github.io/2019/03/17/容器架构/</id>
     <published>2019-03-17T05:51:19.000Z</published>
-    <updated>2019-03-17T06:42:32.006Z</updated>
+    <updated>2019-03-17T06:47:48.450Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一、-什么是容器（What）"><a href="#一、-什么是容器（What）" class="headerlink" title="一、 什么是容器（What）"></a>一、 什么是容器（What）</h1><p>由两部分组成： 应用程序本身、 依赖</p><h1 id="二、为什么需要容器（Why）"><a href="#二、为什么需要容器（Why）" class="headerlink" title="二、为什么需要容器（Why）"></a>二、为什么需要容器（Why）</h1><p>容器具备了超强的可移植能力<br><strong>Docker 特性</strong></p><ul><li>打包对象：任何的软件及其依赖</li><li>硬件依赖：无需修改便可以运行几乎所有的平台</li><li>隔离性：提供run、start、stop标准操作</li><li>高效性：轻量级、快速启动迁移</li><li>职能分工：开发-运维</li></ul><p><strong>容器优势</strong></p><ul><li>环境隔离、可重复性</li></ul><h1 id="三、容器是如何工作（How）"><a href="#三、容器是如何工作（How）" class="headerlink" title="三、容器是如何工作（How）"></a>三、容器是如何工作（How）</h1><p>待续</p>]]></content>
     
@@ -31,7 +31,7 @@
     
     </summary>
     
-      <category term="Docker 容器技术" scheme="https://rizhenwei.github.io/categories/Docker-%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
+      <category term="容器技术" scheme="https://rizhenwei.github.io/categories/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="容器" scheme="https://rizhenwei.github.io/tags/%E5%AE%B9%E5%99%A8/"/>
@@ -43,7 +43,7 @@
     <link href="https://rizhenwei.github.io/2019/03/17/%E5%AE%B9%E5%99%A8%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/"/>
     <id>https://rizhenwei.github.io/2019/03/17/容器生态系统/</id>
     <published>2019-03-17T04:25:28.000Z</published>
-    <updated>2019-03-17T05:49:24.731Z</updated>
+    <updated>2019-03-17T06:46:33.721Z</updated>
     
     <content type="html"><![CDATA[<h1 id="容器生态系统"><a href="#容器生态系统" class="headerlink" title="容器生态系统"></a>容器生态系统</h1><p>介绍容器生态系统包含哪些技术、技术之间的相互关系、核心的技术等  </p><p><img src="/2019/03/17/容器生态系统/容器生态系统.png" alt="容器生态图"></p>]]></content>
     
@@ -53,7 +53,7 @@
     
     </summary>
     
-      <category term="Docker 容器技术" scheme="https://rizhenwei.github.io/categories/Docker-%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
+      <category term="容器技术" scheme="https://rizhenwei.github.io/categories/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="容器" scheme="https://rizhenwei.github.io/tags/%E5%AE%B9%E5%99%A8/"/>
