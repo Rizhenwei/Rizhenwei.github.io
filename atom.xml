@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rizhenwei.github.io/"/>
-  <updated>2019-03-17T07:12:59.365Z</updated>
+  <updated>2019-03-17T08:21:22.248Z</updated>
   <id>https://rizhenwei.github.io/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-shell基础语法</title>
+    <link href="https://rizhenwei.github.io/2019/03/17/Linux-shell%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <id>https://rizhenwei.github.io/2019/03/17/Linux-shell基础语法/</id>
+    <published>2019-03-17T07:26:22.000Z</published>
+    <updated>2019-03-17T08:21:22.248Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、变量"><a href="#一、变量" class="headerlink" title="一、变量"></a>一、变量</h2><blockquote><p>环境变量： </p></blockquote><p>env 命令可以查看shell下的所有环境变量， 常用的环境变量有:</p><ul><li>HOME: 用户主文件夹</li><li>SHELL: shell使用的是哪一个程序</li><li>HISTSIZE: 是历史命令记录条数有关。 默认是1000</li><li>MAIL:用户取用的mailbox位置</li><li>PATA:执行文件查找的路径</li><li>INPUTRC:与按键功能有关， 可以设置特殊案件</li><li>LANG: 语系数据， 终端显示乱码的时候需要调试（不同语系造成）， 修改方法, 先查看支持多少种语系， 命令 locale –a查找后， 在执行locale 命令进行相应的修改</li></ul><blockquote><p>Linux Shell 通配符、 转义字符、 元字符、 特殊字符</p></blockquote><p><strong>通配符</strong><br><img src="/2019/03/17/Linux-shell基础语法/通配符.png" alt="通配符"><br><strong>转义符</strong><br><img src="/2019/03/17/Linux-shell基础语法/转义符.png" alt="转义符"><br><strong>转义符</strong><br><img src="/2019/03/17/Linux-shell基础语法/元字符.png" alt="元字符"></p><blockquote><p>常用的一些命令</p></blockquote><p><strong>打印和设值： </strong><br>变量显示 echo 要在变量前加上’’<br>变量设置： unset 或用“=”连接， 用“”或转译符“\”号保持特殊字符原特性；<br>如果要在其他子程序中使用， 要增加export 使得他变为环境变量；<br><strong>变量有效范围： </strong><br>局部变量=自定义变量；<br>全局变量=环境变量， 可以被子进程引用<br>read： 读取来自键盘的输入变量<br>declare： 申明变量类型  常用的有“整数数字”“字符串”-默认、 “只读类型”、 “环境变量”、 “数组”——读取方式 ${数组}<br><strong>变量删除、 替换</strong>： </p><ul><li>删除</li></ul><p>‘#’:从前边开始删除变量内容, 仅仅删除符合替换文字最短的那个<br>‘##’:从前边开始删除变量内容, 仅仅删除符合替换文字最短的那个<br>%:从后面向前删除<br>表达方式： echo ${path#/<em>xxx}  其中</em>xxx是被删除部分</p><ul><li>替换</li></ul><p><code>`auto默认值替换， 如果变量$var没有定义， 则整体值为default字符串， 但var变量本身并没有被设置${var-default}        // 如果var定义了， 但为空， 则还使用$var， 即为空auto`</code></p><p><code>`auto${var:-default}          //如果var定义了， 但为空， 则使用default字符串, 默认值设置， 包含默认值替换的所有功能（标准输出一样）， 不同在于， 如果变量$var没有定义， 则在输出default字符串的同时， $var也被设置成default字符串auto`</code><br> <code>${var=default}           //如果var定义了， 但为空， 则还使用$var， 即为空</code> </p><p> <code>${var:=default}           //如果var定义了， 但为空， 则将$var设置成default字符串</code> <strong><br>定向输入， 输出： </strong><br>    ‘&gt;&gt;’: 定向输出到指定文件 对标准错误定向输出， 要把准备定向文件的描述符编号放在 &gt; 操作符之前。 例如 kill– l 1234 &gt; /dev/null<br>2 &gt; &amp; l 放到回收站 “&lt;&lt;”: 定向标准输入 <strong><br>    管道： </strong><br>    linux 可以通过管道连接进程， 之间的数据流可以协调<br>ps– xo coom | sort | uniq | grep– v sh | more<br><code>`auto字符串、 环境变量、 参数变量： 字符串有空格要用引号括起来， 等号两边没有空格$HOME    //当前用户主目录$PATH    //用分隔号分开的用来收索的目录  $#        //传递给脚本参数的个数$1, $2..    //脚本程序的参数auto`</code></p><h2 id="二、数据流定向"><a href="#二、数据流定向" class="headerlink" title="二、数据流定向"></a>二、数据流定向</h2><blockquote><p>：以覆盖的方法将『正确的数据』输出到指定的文件或装置上<br>1&gt; ：以覆盖的方法将『正确的数据』输出到指定的文件或装置上<br>1&gt;&gt;：以累加的方法将『正确的数据』输出到指定的文件或装置上<br>2&gt; ：以覆盖的方法将『错误的数据』输出到指定的文件或装置上<br>2&gt;&gt;：以累加的方法将『错误的数据』输出到指定的文件或装置上<br>2&gt;&amp; 1：将正确和错误的数据全部写入到指定文件或装置上</p></blockquote><p>&lt;：将原本需要由键盘输入的数据，改由文件内容来取代<br>&lt;&lt;：代表的是『结束的输入字符』<br>&lt;&lt;&lt;:将字符串重定向到stdin。</p><p>例子：<br>find /home –name testing &gt;t1.txt 2&gt;t2.txt  将正确输出和错误输出存放在不同文件<br>find /home –name testing &gt;t1.txt 2&gt;&amp;1  将正确输出和错误输出存放在t1.txt同文件</p><p><strong>命令执行判断依据</strong><br>命令执行判断依据–;,&amp;&amp;,||<br>在Linux运维过程中或者日常Linux系统操作过程中会同时执行多条命令，这样的话需要通过我们的多重命令方式进行处理。<br>1.<br>通过使用’;’分号执行多个命令，如例：<br><code>#sync;sync;shutdown -h now</code><br>2.<br>通过判断执行命令，&amp;&amp;/||执行情况 如例:<br><strong><code>cmd1&amp;&amp;cmd2:</code></strong><br><em><code>若cmd1执行完毕且正确执行($?=0),则开始执行cmd2若cmd1执行完毕且错误执行($?!=0),则开cmd2不执行</code></em><br><strong><code>cmd1||cmd2:</code></strong><br><em><code>若cmd1执行完毕后正确执行($?=0),则cmd2不执行。若cmd1执行完毕后为错误($?!=0),则开始只执行cmd2</code></em></p><p><strong>管道：</strong><br>linux 可以通过管道连接进程，之间的数据流可以协调<br><code>ps –xo coom | sort |uniq | grep –v sh |more</code></p><ul><li><p>1）管道命令仅为处理标准输出（即正确的输出），对于标准错误输出，将忽略</p></li><li><p>2）管理命令的后一个命令必须能将前一个命令的标准输出变为它的标准输入才可以，如less,more,head,tail就可以，而ls, cp, mv就不行。</p></li></ul><p><strong>选取命令</strong><br>cut - 列选取命令<br>cut -d ‘分隔字符’ -f 选取的列数<br><code>echo $PATH|cut -d &#39;:&#39; -f 3,5</code>  –选取第3列和第5列<br>grep - 行选取命令<br>grep分一行数据，若当中有我们所需要的信息，则显示该行，否则忽略。<br>grep [-cinv] ‘查找的字符串’ filename<br>-c：计算找到的次数<br>-i：忽略大小写<br>-v：反向选择<br>-n：输出第几行</p><p><code>grep [-acivn] [--color=auto]</code> ’查找字符串‘ filename<br>-a: 将binary文件以test文件的方式查找数据；-c:计算找到’查找字符串’的次数；-i：忽略大小写的不同，所以大小写视为相同；-n：顺便输出行号；-v:反向选择，即显示出没有‘查找字符串’内容的一行；–color=auto:可以将找到的关键字部分加上颜色显示<br> <code>last | grep -v &#39;root&#39; | cut -d &#39; &#39; -f1</code><br> <code>grep --color=auto &#39;MANPATH&#39; /etc/man.config</code><br>排序命令：sort:依据不同的数据类型进行排序,wc：统计,uniq:重复的数据仅列出一个<br>sort: 使用LANG=C让语系统一，数据排序比较好一点<br><code>sort [-fbMnrtuk] [file or stdin]</code><br>参数：<br>-f : 忽略大小写；-b ：忽略最前面；-M ：以月份的名字来排序；-n ：使用“纯数字”进行排序；-r：反向排序；-u： 就是uniq,相同的数据中，仅出现一行代表；-t：分隔符，默认[tab]键来分隔； -k ：以那个区间（field）来进行排序的意思<br><code>cat /etc/passwd | sort ; cat /etc/passwd | sort -t &#39;:&#39; -k 3 ; last | cut -d &#39; &#39; -f1 | sort uniq [-ic]</code><br>参数：<br>-i：忽略大小写字符的不同； -c：进行计数<br><code>last | cut -d &#39; &#39; -f1 |sort|uniq -c</code><br><code>wc [-lwm]</code><br>参数：<br>-l ： 仅列出行；-w ：仅列出多少字（英文单字）；-m ：仅列出字符<br>last可以输出登陆者，但最后两行并非账号内容。取得月份登陆系统的总人数<br><code>last | grep [a-zA-Z]|grep -v wtmp|wc -l</code><br><code>last | tee last.list | cut -d &quot; &quot; -f1        ;   ls -l | tee -a ~/homefile |more</code>   (-a,将信息累加而不是覆盖）<br>字符转换命令： tr,col,join,paste,epand<br>tr:可以用来删除一段信息当中的文字，或者进行文字信息替换<br>tr [-ds] SET1 …<br>参数：<br>-d:删除信息当中的SET1Z这个字符串；-s：替换掉重复字符串<br><code>last | tr &#39;[a-z]&#39; &#39;[A-Z]&#39;</code><br><code>cat /etc/passwd | tr -d &#39;:&#39;</code>  将：删除<br><code>cp /etc/passwd /root/passwd &amp;&amp; UNIX2dos /root/passwd</code><br><code>file /etc/passwd /root/passwd</code><br><code>col [-xb]</code><br>参数：<br>-x:将tab键转换成对等的看空格键；-b ：在文字内有反斜杠（/）时，仅保留反斜杠最后接的那个字符<br>例如：cat -A 显示所有特殊按钮，最后以col将[tab]转为空白<br><code>cat -A /etc/man.conf</code>    &lt;==此时看到很多^I的符号，那就是tab<br><code>cat /etc/man.config | col -x | cat -A | more</code>      [tab]键会转为空格键<br>join  加入/参加   在处理两个文件之间的数据。将两个文件当中的相同数据那一行加在一起。<br><code>join [-ti12] file1 file2</code><br>参数：<br> -t : join默认以空格符分隔数据，并且对比“第一个字段”的数据；-i: 默认忽略大小写 ； -1 ：代表第一个文件要用哪个字段分析的意思 ； -2 ：代表第二个字段用哪个字段来分析<br>[root@master ssh]# join -t ‘:’ /etc/passwd /etc/shadow<br> paste [-d] file1 file2  直接将两行粘在一起，且中间以[tab]隔开<br> 参数：<br> -d : 后面可以接分隔符，默认以tab来分隔；- ： 如果file部分写成- ，表示来自shandard input 的数据的意思<br>[root@master ssh]# <code>paste /etc/passwd /etc/shadow</code><br><code>expand [-t] file</code>  将[tab]键转成空格<br><code>grep &quot;^MANPATH&quot; /etc/man.config |head -n 3 | expand -t 6 - | cat -A</code><br>切割命令 split    大文件切割成小文件<br><code>split [-bl] file PREFI</code></p><p>-b ：后面可接欲切割的文件大小，可加单位 例如：b,k,m等；    -l ：以行数来进行切割；<br><code>cd /tmp ; split -b 300k /etc/termcap termcap  ;  ll -k trmcap*</code><br>参数代换： xargs [-0epn] command<br>参数：<br>-0 ： 如果输入stdin含有特殊字符，例如<code>,/ 空格字符时，这个参数可以将它还原成一般符号； -e :EOF，后面接一个字符串，xargs分析到这个字符串时，就会停止工作； -p ： 在执行每个命令的参数时，都会询问用户的意思；-n ：后面接次数，诶次command命令都会执行。找出具有特殊权限的文件名</code>find /sbin -perm +7000 |ls -l`</p>]]></content>
+    
+    <summary type="html">
+    
+      基础等常规shell命令
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://rizhenwei.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://rizhenwei.github.io/tags/Linux/"/>
+    
+      <category term="shell" scheme="https://rizhenwei.github.io/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-文件权限和目录配置</title>
+    <link href="https://rizhenwei.github.io/2019/03/17/Linux-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE/"/>
+    <id>https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/</id>
+    <published>2019-03-17T07:25:15.000Z</published>
+    <updated>2019-03-17T08:21:45.413Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>文件属性</strong><br> 查看命令：ls -al<br>对应：【权限】【连接数】【所有者】【用户组】【文件容量】【修改日期】【文件名】<br>第一列：文件权限<br>一共长度为10个字符<br>第一个字符为：表示”目录、文件、链接“ 以【d】开头是目录；以【-】开头是文件；以【i】开头是链接；以【c】开头是串口端设备<br>以下的3个字符为一组；第一组是文件所有者的权限、第二组是相同用户组的权限、第三组是其他非相同用户组的权限；<br>每一组的权限由“rwx”组成，对应为没有的用“-”代替，其中“r”为可读、“w”为可写，“x”为可执行<br><strong>改变文件属性&amp;&amp;权限</strong><br>命令：<br><code>chgrp  [-R]  DIR/FIRNAME</code> ：          递归的改变文件所属于的用户组<br><code>chown   [-R]  账号名 文件or目录</code>：     递归的改变文件所有者<br><code>chomd   数字类型/符号类型</code>：           改变文件属性<br>数字类型  r:4  w:2  x:1  权限分配表<br>符号类型：<code>chmod  [u/g/o/a] [+/-/=] [r/w/x]</code><br>第一列表示用户组：拥有着、共同用户组、其他用户、全部用户  ； 第二列表示： 增加、去除、设置 ； 第三列表示权限 </p><p><strong>linux 文件种类和扩展名</strong><br>文件种类：普通文件、纯文本文件（ascii）、二进制文件、数据文件（data）、设备文件（device）、链接（link）、接口文件（sockets）<br>管道（fifo\pipe）<br>文件扩展名：没有扩展名和文件属性有关<br>但为方便与win相识</p><p><strong>目录树</strong><br><img src="/2019/03/17/Linux-文件权限和目录配置/文件目录树.png" alt="文件目录树"></p>]]></content>
+    
+    <summary type="html">
+    
+      linux文件权限汇总
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://rizhenwei.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://rizhenwei.github.io/tags/Linux/"/>
+    
+      <category term="shell" scheme="https://rizhenwei.github.io/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-正则表达式</title>
+    <link href="https://rizhenwei.github.io/2019/03/17/Linux-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>https://rizhenwei.github.io/2019/03/17/Linux-正则表达式/</id>
+    <published>2019-03-17T07:24:28.000Z</published>
+    <updated>2019-03-17T08:22:24.850Z</updated>
+    
+    <summary type="html">
+    
+      常用正则表达式
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://rizhenwei.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://rizhenwei.github.io/tags/Linux/"/>
+    
+      <category term="shell" scheme="https://rizhenwei.github.io/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>容器架构</title>
