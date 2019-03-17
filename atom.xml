@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rizhenwei.github.io/"/>
-  <updated>2018-12-28T15:44:57.305Z</updated>
+  <updated>2019-03-17T04:31:41.862Z</updated>
   <id>https://rizhenwei.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>容器生态系统</title>
+    <link href="https://rizhenwei.github.io/2019/03/17/%E5%AE%B9%E5%99%A8%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://rizhenwei.github.io/2019/03/17/容器生态系统/</id>
+    <published>2019-03-17T04:25:28.000Z</published>
+    <updated>2019-03-17T04:31:41.862Z</updated>
+    
+    <summary type="html">
+    
+      整体介绍容器的生态系统
+    
+    </summary>
+    
+      <category term="Docker 容器技术" scheme="https://rizhenwei.github.io/categories/Docker-%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="容器" scheme="https://rizhenwei.github.io/tags/%E5%AE%B9%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo 博客搭建-系统安装和配置</title>
