@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rizhenwei.github.io/"/>
-  <updated>2019-03-17T08:21:22.248Z</updated>
+  <updated>2019-03-24T08:19:58.976Z</updated>
   <id>https://rizhenwei.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>性能测试-Jmeter工具基本使用</title>
+    <link href="https://rizhenwei.github.io/2019/03/24/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-Jmeter%E5%B7%A5%E5%85%B7%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>https://rizhenwei.github.io/2019/03/24/性能测试-Jmeter工具基本使用/</id>
+    <published>2019-03-24T07:15:22.000Z</published>
+    <updated>2019-03-24T08:19:58.976Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Jmeter-工具基本使用方法"><a href="#Jmeter-工具基本使用方法" class="headerlink" title="Jmeter 工具基本使用方法"></a>Jmeter 工具基本使用方法</h1><h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><p>地址：<a href="http://jmeter.apache.org/" target="_blank" rel="noopener">Jemter 安装地址</a><br>怎么装的问度娘，多得很</p><h1 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h1><h2 id="添加HTTP接口"><a href="#添加HTTP接口" class="headerlink" title="添加HTTP接口"></a>添加HTTP接口</h2><ul><li>一般步骤：“测试计划”–&gt;“添加”–&gt;“Threads(Users)”–&gt;“线程组”<br>对应的</li></ul><p><a href="https://www.cnblogs.com/fnng/p/5827577.html" target="_blank" rel="noopener">Jmeter 基本用法</a></p><h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><p><a href="https://www.cnblogs.com/fnng/archive/2012/12/29/2839420.html" target="_blank" rel="noopener">Jmeter 高级使用技巧-分布式测试&amp;线程间变量传递</a></p><h2 id="简单的性能测试"><a href="#简单的性能测试" class="headerlink" title="简单的性能测试"></a>简单的性能测试</h2><p><a href="https://www.cnblogs.com/fnng/archive/2012/12/22/2829479.html" target="_blank" rel="noopener">性能测试-sample-http请求</a></p><p><a href="https://www.cnblogs.com/fnng/archive/2011/08/03/2126775.html" target="_blank" rel="noopener">一种简单的数据库性能测试方法</a></p>]]></content>
+    
+    <summary type="html">
+    
+      介绍Jmeter基本使用方法
+    
+    </summary>
+    
+      <category term="Jemeter" scheme="https://rizhenwei.github.io/categories/Jemeter/"/>
+    
+      <category term="性能测试" scheme="https://rizhenwei.github.io/categories/Jemeter/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://rizhenwei.github.io/2019/03/17/hello-world/"/>
+    <id>https://rizhenwei.github.io/2019/03/17/hello-world/</id>
+    <published>2019-03-17T09:06:16.501Z</published>
+    <updated>2018-12-28T13:48:00.570Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Linux-shell基础语法</title>
@@ -138,27 +181,6 @@
     <updated>2018-12-28T15:44:57.305Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://rizhenwei.github.io/2018/12/28/hello-world/"/>
-    <id>https://rizhenwei.github.io/2018/12/28/hello-world/</id>
-    <published>2018-12-28T13:48:00.569Z</published>
-    <updated>2018-12-28T13:48:00.570Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
     
     </summary>
     
