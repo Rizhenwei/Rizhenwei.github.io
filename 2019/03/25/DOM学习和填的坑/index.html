@@ -110,18 +110,20 @@
 
 
 
-  <meta name="description" content="介绍Jmeter基本使用方法">
-<meta name="keywords" content="Jmeter,性能测试">
+  <meta name="description" content="前端DOM定位元素">
+<meta name="keywords" content="元素定位,selenium">
 <meta property="og:type" content="article">
-<meta property="og:title" content="性能测试-Jmeter工具基本使用">
-<meta property="og:url" content="https://rizhenwei.github.io/2019/03/24/性能测试-Jmeter工具基本使用/index.html">
+<meta property="og:title" content="DOM定位元素和填的坑">
+<meta property="og:url" content="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/index.html">
 <meta property="og:site_name" content="亦珍独立博客">
-<meta property="og:description" content="介绍Jmeter基本使用方法">
+<meta property="og:description" content="前端DOM定位元素">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-24T08:19:58.976Z">
+<meta property="og:image" content="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/DOM思维导图.png">
+<meta property="og:updated_time" content="2019-03-25T13:46:01.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="性能测试-Jmeter工具基本使用">
-<meta name="twitter:description" content="介绍Jmeter基本使用方法">
+<meta name="twitter:title" content="DOM定位元素和填的坑">
+<meta name="twitter:description" content="前端DOM定位元素">
+<meta name="twitter:image" content="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/DOM思维导图.png">
 
 
 
@@ -130,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="https://rizhenwei.github.io/2019/03/24/性能测试-Jmeter工具基本使用/">
+  <link rel="canonical" href="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/">
 
 
 
@@ -140,7 +142,7 @@
   };
 </script>
 
-  <title>性能测试-Jmeter工具基本使用 | 亦珍独立博客</title>
+  <title>DOM定位元素和填的坑 | 亦珍独立博客</title>
   
 
 
@@ -360,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rizhenwei.github.io/2019/03/24/性能测试-Jmeter工具基本使用/">
+    <link itemprop="mainEntityOfPage" href="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rizhen Wei">
@@ -377,7 +379,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">性能测试-Jmeter工具基本使用
+          <h1 class="post-title" itemprop="name headline">DOM定位元素和填的坑
 
               
             
@@ -403,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2019-03-24 15:15:22 / 修改时间：16:19:58" itemprop="dateCreated datePublished" datetime="2019-03-24T15:15:22+08:00">2019-03-24</time>
+              <time title="创建时间：2019-03-25 21:40:30 / 修改时间：21:46:01" itemprop="dateCreated datePublished" datetime="2019-03-25T21:40:30+08:00">2019-03-25</time>
             
 
             
@@ -425,14 +427,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Jemeter/" itemprop="url" rel="index"><span itemprop="name">Jemeter</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Jemeter/性能测试/" itemprop="url" rel="index"><span itemprop="name">性能测试</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/selenium/" itemprop="url" rel="index"><span itemprop="name">selenium</span></a></span>
 
                 
                 
@@ -452,7 +447,7 @@
           
 
           
-              <div class="post-description">介绍Jmeter基本使用方法</div>
+              <div class="post-description">前端DOM定位元素</div>
           
 
         </div>
@@ -468,14 +463,121 @@
       
 
       
-        <h1 id="Jmeter-工具基本使用方法"><a href="#Jmeter-工具基本使用方法" class="headerlink" title="Jmeter 工具基本使用方法"></a>Jmeter 工具基本使用方法</h1><h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><p>地址：<a href="http://jmeter.apache.org/" target="_blank" rel="noopener">Jemter 安装地址</a><br>怎么装的问度娘，多得很</p>
-<h1 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h1><h2 id="添加HTTP接口"><a href="#添加HTTP接口" class="headerlink" title="添加HTTP接口"></a>添加HTTP接口</h2><ul>
-<li>一般步骤：“测试计划”–&gt;“添加”–&gt;“Threads(Users)”–&gt;“线程组”<br>对应的</li>
+        <h1 id="DOM-学习和填的坑"><a href="#DOM-学习和填的坑" class="headerlink" title="DOM 学习和填的坑"></a>DOM 学习和填的坑</h1><h2 id="1-操作DOM"><a href="#1-操作DOM" class="headerlink" title="1. 操作DOM"></a>1. 操作DOM</h2><ul>
+<li><strong>DOM定位获取方法</strong><br><img src="/2019/03/25/DOM学习和填的坑/DOM思维导图.png" alt="DOM 思维导图"></li>
+<li><strong>xpath定位的坑</strong></li>
 </ul>
-<p><a href="https://www.cnblogs.com/fnng/p/5827577.html" target="_blank" rel="noopener">Jmeter 基本用法</a></p>
-<h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><p><a href="https://www.cnblogs.com/fnng/archive/2012/12/29/2839420.html" target="_blank" rel="noopener">Jmeter 高级使用技巧-分布式测试&amp;线程间变量传递</a></p>
-<h2 id="简单的性能测试"><a href="#简单的性能测试" class="headerlink" title="简单的性能测试"></a>简单的性能测试</h2><p><a href="https://www.cnblogs.com/fnng/archive/2012/12/22/2829479.html" target="_blank" rel="noopener">性能测试-sample-http请求</a></p>
-<p><a href="https://www.cnblogs.com/fnng/archive/2011/08/03/2126775.html" target="_blank" rel="noopener">一种简单的数据库性能测试方法</a></p>
+<ul>
+<li><a href="https://blog.csdn.net/huilan_same/article/details/52541680" target="_blank" rel="noopener">selenium —— 父子、兄弟、相邻节点定位方式详解</a></li>
+<li><a href="https://www.cnblogs.com/hanmk/p/8215809.html" target="_blank" rel="noopener">selenium —— 上传文件处理标签被隐藏</a></li>
+</ul>
+<ul>
+<li><strong>xpath语法总结</strong></li>
+</ul>
+<ul>
+<li>XPath 轴</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>轴名称</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ancestor</td>
+<td>选取当前节点的所有先辈（父、祖父等）。</td>
+</tr>
+<tr>
+<td>ancestor-or-self</td>
+<td>选取当前节点的所有先辈（父、祖父等）以及当前节点本身。</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>选取当前节点的所有属性。</td>
+</tr>
+<tr>
+<td>child</td>
+<td>选取当前节点的所有子元素。</td>
+</tr>
+<tr>
+<td>descendant</td>
+<td>选取当前节点的所有后代元素（子、孙等）。</td>
+</tr>
+<tr>
+<td>descendant-or-self</td>
+<td>选取当前节点的所有后代元素（子、孙等）以及当前节点本身。</td>
+</tr>
+<tr>
+<td>following</td>
+<td>选取文档中当前节点的结束标签之后的所有节点。</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>选取当前节点的所有命名空间节点。</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>选取当前节点的父节点。</td>
+</tr>
+<tr>
+<td>preceding</td>
+<td>选取文档中当前节点的开始标签之前的所有节点。</td>
+</tr>
+<tr>
+<td>preceding-sibling</td>
+<td>选取当前节点之前的所有同级节点。</td>
+</tr>
+<tr>
+<td>self</td>
+<td>选取当前节点。</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>实例</strong></em><br>| 例子                   | 结果                                                               |<br>| ———————- | —————————————————————— |<br>| child::book            | 选取所有属于当前节点的子元素的 book 节点。                         |<br>| attribute::lang        | 选取当前节点的 lang 属性。                                         |<br>| child:: <em>              | 选取当前节点的所有子元素。                                         |<br>| attribute:: </em>          | 选取当前节点的所有属性。                                           |<br>| child::text()          | 选取当前节点的所有文本子节点。                                     |<br>| child::node()          | 选取当前节点的所有子节点。                                         |<br>| descendant::book       | 选取当前节点的所有 book 后代。                                     |<br>| ancestor::book         | 选择当前节点的所有 book 先辈。                                     |<br>| ancestor-or-self::book | 选取当前节点的所有 book 先辈以及当前节点（如果此节点是 book 节点） |<br>| child:: */child::price | 选取当前节点的所有 price 孙节点。                                  |</p>
+<ul>
+<li><em>Xpath 语法</em></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Column A</th>
+<th>Column B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodename</td>
+<td>选取此节点的所有子节点。</td>
+</tr>
+<tr>
+<td>/</td>
+<td>从根节点选取。</td>
+</tr>
+<tr>
+<td>//</td>
+<td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>选取当前节点。</td>
+</tr>
+<tr>
+<td>..</td>
+<td>选取当前节点的父节点。</td>
+</tr>
+<tr>
+<td>@</td>
+<td>选取属性</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>xpath 一些函数和例子</em></li>
+</ul>
+<p><strong>html实例</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;建立测试网址文本&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;content&quot; version=&quot;1.0&quot;&gt;</span><br><span class="line">    &lt;ul id=&quot;useful&quot;&gt;</span><br><span class="line">        &lt;li&gt;数学建模方法&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;数学建模数据&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;数学建模软件&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;ul id=&quot;useless&quot;&gt;</span><br><span class="line">        &lt;li&gt;不需要的信息１&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;不需要的信息２&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;不需要的信息３&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">     &lt;book&gt;</span><br><span class="line">        &lt;title lang=&quot;eng&quot;&gt;数学建模书籍1&lt;/title&gt;</span><br><span class="line">        &lt;price&gt;29.99&lt;/price&gt;</span><br><span class="line">    &lt;/book&gt;</span><br><span class="line">    &lt;book&gt;</span><br><span class="line">        &lt;title lang=&quot;eng&quot;&gt;数学建模书籍2&lt;/title&gt;</span><br><span class="line">        &lt;price&gt;39.95&lt;/price&gt;</span><br><span class="line">     &lt;/book&gt;</span><br><span class="line">    &lt;div id=&quot;url&quot;&gt;</span><br><span class="line">        &lt;a href=&quot;http:nveyun.com&quot;&gt;虐云建模网&lt;/a&gt;</span><br><span class="line">        &lt;a href=&quot;http://nveyun.com/forum.php&quot; title=&quot;虐云建模论坛&quot;&gt;建模论坛&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p><em>代码片段</em>：<br>[last()-1]：表示选择的倒数第二个book子元素<br>book_last=selector.xpath(‘//book[last()]/title[@lang=”eng”]/text()’)<br>[position()&lt; 3] ：表示选择前两个book子元素<br>book_p=selector.xpath(‘//book[position()&lt; 3]/title[@lang=”eng”]/text()’)<br>//title[@lang] ：表示选择所有具有lang属性的title节点<br>lang=selector.xpath(‘//title[@lang]/text()’)<br>运算符：and 和 or   [@class=’a’  or @class=’b’]<br>部分匹配可以用contains</p>
 
       
     </div>
@@ -526,8 +628,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/Linux-shell基础语法/" rel="next" title="Linux-shell基础语法">
-                <i class="fa fa-chevron-left"></i> Linux-shell基础语法
+              <a href="/2019/03/25/python资料中文大全/" rel="next" title="python资料中文大全">
+                <i class="fa fa-chevron-left"></i> python资料中文大全
               </a>
             
           </div>
@@ -535,10 +637,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/25/python资料中文大全/" rel="prev" title="python资料中文大全">
-                python资料中文大全 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -750,7 +848,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Jmeter-工具基本使用方法"><span class="nav-number">1.</span> <span class="nav-text">Jmeter 工具基本使用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装"><span class="nav-number">2.</span> <span class="nav-text">一、安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、使用"><span class="nav-number">3.</span> <span class="nav-text">二、使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加HTTP接口"><span class="nav-number">3.1.</span> <span class="nav-text">添加HTTP接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级用法"><span class="nav-number">3.2.</span> <span class="nav-text">高级用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单的性能测试"><span class="nav-number">3.3.</span> <span class="nav-text">简单的性能测试</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM-学习和填的坑"><span class="nav-number">1.</span> <span class="nav-text">DOM 学习和填的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-操作DOM"><span class="nav-number">1.1.</span> <span class="nav-text">1. 操作DOM</span></a></li></ol></li></ol></div>
             
 
           </div>
