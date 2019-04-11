@@ -110,20 +110,18 @@
 
 
 
-  <meta name="description" content="linux文件权限汇总">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="Anaconda 常用指令">
+<meta name="keywords" content="python,Anaconda">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-文件权限和目录配置">
-<meta property="og:url" content="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/index.html">
+<meta property="og:title" content="Anaconda 常用指令">
+<meta property="og:url" content="https://rizhenwei.github.io/2019/03/25/anaconda常用指令/index.html">
 <meta property="og:site_name" content="亦珍独立博客">
-<meta property="og:description" content="linux文件权限汇总">
+<meta property="og:description" content="Anaconda 常用指令">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/文件目录树.png">
-<meta property="og:updated_time" content="2019-03-17T08:21:45.413Z">
+<meta property="og:updated_time" content="2019-04-03T12:52:50.840Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux-文件权限和目录配置">
-<meta name="twitter:description" content="linux文件权限汇总">
-<meta name="twitter:image" content="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/文件目录树.png">
+<meta name="twitter:title" content="Anaconda 常用指令">
+<meta name="twitter:description" content="Anaconda 常用指令">
 
 
 
@@ -132,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/">
+  <link rel="canonical" href="https://rizhenwei.github.io/2019/03/25/anaconda常用指令/">
 
 
 
@@ -142,7 +140,7 @@
   };
 </script>
 
-  <title>Linux-文件权限和目录配置 | 亦珍独立博客</title>
+  <title>Anaconda 常用指令 | 亦珍独立博客</title>
   
 
 
@@ -362,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/">
+    <link itemprop="mainEntityOfPage" href="https://rizhenwei.github.io/2019/03/25/anaconda常用指令/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rizhen Wei">
@@ -379,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux-文件权限和目录配置
+          <h1 class="post-title" itemprop="name headline">Anaconda 常用指令
 
               
             
@@ -405,12 +403,24 @@
                 
               
 
-              <time title="创建时间：2019-03-17 15:25:15 / 修改时间：16:21:45" itemprop="dateCreated datePublished" datetime="2019-03-17T15:25:15+08:00">2019-03-17</time>
+              <time title="创建时间：2019-03-25 21:40:30" itemprop="dateCreated datePublished" datetime="2019-03-25T21:40:30+08:00">2019-03-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-03 20:52:50" itemprop="dateModified" datetime="2019-04-03T20:52:50+08:00">2019-04-03</time>
               
             
           </span>
@@ -427,7 +437,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
 
                 
                 
@@ -447,7 +457,7 @@
           
 
           
-              <div class="post-description">linux文件权限汇总</div>
+              <div class="post-description">Anaconda 常用指令</div>
           
 
         </div>
@@ -463,9 +473,20 @@
       
 
       
-        <p><strong>文件属性</strong><br> 查看命令：ls -al<br>对应：【权限】【连接数】【所有者】【用户组】【文件容量】【修改日期】【文件名】<br>第一列：文件权限<br>一共长度为10个字符<br>第一个字符为：表示”目录、文件、链接“ 以【d】开头是目录；以【-】开头是文件；以【i】开头是链接；以【c】开头是串口端设备<br>以下的3个字符为一组；第一组是文件所有者的权限、第二组是相同用户组的权限、第三组是其他非相同用户组的权限；<br>每一组的权限由“rwx”组成，对应为没有的用“-”代替，其中“r”为可读、“w”为可写，“x”为可执行<br><strong>改变文件属性&amp;&amp;权限</strong><br>命令：<br><code>chgrp  [-R]  DIR/FIRNAME</code> ：          递归的改变文件所属于的用户组<br><code>chown   [-R]  账号名 文件or目录</code>：     递归的改变文件所有者<br><code>chomd   数字类型/符号类型</code>：           改变文件属性<br>数字类型  r:4  w:2  x:1  权限分配表<br>符号类型：<code>chmod  [u/g/o/a] [+/-/=] [r/w/x]</code><br>第一列表示用户组：拥有着、共同用户组、其他用户、全部用户  ； 第二列表示： 增加、去除、设置 ； 第三列表示权限 </p>
-<p><strong>linux 文件种类和扩展名</strong><br>文件种类：普通文件、纯文本文件（ascii）、二进制文件、数据文件（data）、设备文件（device）、链接（link）、接口文件（sockets）<br>管道（fifo\pipe）<br>文件扩展名：没有扩展名和文件属性有关<br>但为方便与win相识</p>
-<p><strong>目录树</strong><br><img src="/2019/03/17/Linux-文件权限和目录配置/文件目录树.png" alt="文件目录树"></p>
+        <h1 id="Anaconda-常用指令"><a href="#Anaconda-常用指令" class="headerlink" title="Anaconda 常用指令"></a>Anaconda 常用指令</h1><blockquote>
+<p>tip python 环境管理<br><a href="https://www.anaconda.com/distribution/" target="_blank" rel="noopener">官网下载地址</a></p>
+</blockquote>
+<ol>
+<li>查看安装的版本：  <code>conda --version</code></li>
+<li>更新所有工具包：   <code>conda upgrade --all</code></li>
+<li>激活默认虚拟环境：     <code>activate</code>, 默认为base环境，激活特定环境 <code>activate env_name</code></li>
+<li>创建一个虚拟环境：  <code>conda create -n env_name python=3</code>，指定python版本为3的env_name环境</li>
+<li>安装第三方包： <code>conda install requests</code> 或 <code>pip install requests</code></li>
+<li>卸载第三方包：<code>conda remove requests</code> 或 <code>pip uninstall requests</code></li>
+<li>查看环境安装了那些包： <code>conda list</code></li>
+<li>导出环境：<code>conda env export &gt;env.yaml</code></li>
+<li>导入环境： <code>conda env create -f env.yml</code></li>
+</ol>
 
       
     </div>
@@ -486,14 +507,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
-            <a href="/tags/shell/" rel="tag"># shell</a>
-          
-        </div>
       
 
       
@@ -524,8 +537,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/Linux-正则表达式/" rel="next" title="Linux-正则表达式">
-                <i class="fa fa-chevron-left"></i> Linux-正则表达式
+              <a href="/2019/03/25/python资料中文大全/" rel="next" title="python资料中文大全">
+                <i class="fa fa-chevron-left"></i> python资料中文大全
               </a>
             
           </div>
@@ -534,8 +547,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/17/Linux-shell基础语法/" rel="prev" title="Linux-shell基础语法">
-                Linux-shell基础语法 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/25/DOM学习和填的坑/" rel="prev" title="DOM定位元素和填的坑">
+                DOM定位元素和填的坑 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -581,8 +594,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -732,6 +754,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Anaconda-常用指令"><span class="nav-number">1.</span> <span class="nav-text">Anaconda 常用指令</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

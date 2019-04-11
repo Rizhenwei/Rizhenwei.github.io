@@ -110,20 +110,20 @@
 
 
 
-  <meta name="description" content="linux文件权限汇总">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="前端DOM定位元素">
+<meta name="keywords" content="元素定位,selenium">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-文件权限和目录配置">
-<meta property="og:url" content="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/index.html">
+<meta property="og:title" content="DOM定位元素和填的坑">
+<meta property="og:url" content="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/index.html">
 <meta property="og:site_name" content="亦珍独立博客">
-<meta property="og:description" content="linux文件权限汇总">
+<meta property="og:description" content="前端DOM定位元素">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/文件目录树.png">
-<meta property="og:updated_time" content="2019-03-17T08:21:45.413Z">
+<meta property="og:image" content="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/DOM思维导图.png">
+<meta property="og:updated_time" content="2019-03-25T13:46:01.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux-文件权限和目录配置">
-<meta name="twitter:description" content="linux文件权限汇总">
-<meta name="twitter:image" content="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/文件目录树.png">
+<meta name="twitter:title" content="DOM定位元素和填的坑">
+<meta name="twitter:description" content="前端DOM定位元素">
+<meta name="twitter:image" content="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/DOM思维导图.png">
 
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/">
+  <link rel="canonical" href="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/">
 
 
 
@@ -142,7 +142,7 @@
   };
 </script>
 
-  <title>Linux-文件权限和目录配置 | 亦珍独立博客</title>
+  <title>DOM定位元素和填的坑 | 亦珍独立博客</title>
   
 
 
@@ -362,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rizhenwei.github.io/2019/03/17/Linux-文件权限和目录配置/">
+    <link itemprop="mainEntityOfPage" href="https://rizhenwei.github.io/2019/03/25/DOM学习和填的坑/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rizhen Wei">
@@ -379,7 +379,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux-文件权限和目录配置
+          <h1 class="post-title" itemprop="name headline">DOM定位元素和填的坑
 
               
             
@@ -405,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2019-03-17 15:25:15 / 修改时间：16:21:45" itemprop="dateCreated datePublished" datetime="2019-03-17T15:25:15+08:00">2019-03-17</time>
+              <time title="创建时间：2019-03-25 21:40:30 / 修改时间：21:46:01" itemprop="dateCreated datePublished" datetime="2019-03-25T21:40:30+08:00">2019-03-25</time>
             
 
             
@@ -427,7 +427,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/selenium/" itemprop="url" rel="index"><span itemprop="name">selenium</span></a></span>
 
                 
                 
@@ -447,7 +447,7 @@
           
 
           
-              <div class="post-description">linux文件权限汇总</div>
+              <div class="post-description">前端DOM定位元素</div>
           
 
         </div>
@@ -463,9 +463,121 @@
       
 
       
-        <p><strong>文件属性</strong><br> 查看命令：ls -al<br>对应：【权限】【连接数】【所有者】【用户组】【文件容量】【修改日期】【文件名】<br>第一列：文件权限<br>一共长度为10个字符<br>第一个字符为：表示”目录、文件、链接“ 以【d】开头是目录；以【-】开头是文件；以【i】开头是链接；以【c】开头是串口端设备<br>以下的3个字符为一组；第一组是文件所有者的权限、第二组是相同用户组的权限、第三组是其他非相同用户组的权限；<br>每一组的权限由“rwx”组成，对应为没有的用“-”代替，其中“r”为可读、“w”为可写，“x”为可执行<br><strong>改变文件属性&amp;&amp;权限</strong><br>命令：<br><code>chgrp  [-R]  DIR/FIRNAME</code> ：          递归的改变文件所属于的用户组<br><code>chown   [-R]  账号名 文件or目录</code>：     递归的改变文件所有者<br><code>chomd   数字类型/符号类型</code>：           改变文件属性<br>数字类型  r:4  w:2  x:1  权限分配表<br>符号类型：<code>chmod  [u/g/o/a] [+/-/=] [r/w/x]</code><br>第一列表示用户组：拥有着、共同用户组、其他用户、全部用户  ； 第二列表示： 增加、去除、设置 ； 第三列表示权限 </p>
-<p><strong>linux 文件种类和扩展名</strong><br>文件种类：普通文件、纯文本文件（ascii）、二进制文件、数据文件（data）、设备文件（device）、链接（link）、接口文件（sockets）<br>管道（fifo\pipe）<br>文件扩展名：没有扩展名和文件属性有关<br>但为方便与win相识</p>
-<p><strong>目录树</strong><br><img src="/2019/03/17/Linux-文件权限和目录配置/文件目录树.png" alt="文件目录树"></p>
+        <h1 id="DOM-学习和填的坑"><a href="#DOM-学习和填的坑" class="headerlink" title="DOM 学习和填的坑"></a>DOM 学习和填的坑</h1><h2 id="1-操作DOM"><a href="#1-操作DOM" class="headerlink" title="1. 操作DOM"></a>1. 操作DOM</h2><ul>
+<li><strong>DOM定位获取方法</strong><br><img src="/2019/03/25/DOM学习和填的坑/DOM思维导图.png" alt="DOM 思维导图"></li>
+<li><strong>xpath定位的坑</strong></li>
+</ul>
+<ul>
+<li><a href="https://blog.csdn.net/huilan_same/article/details/52541680" target="_blank" rel="noopener">selenium —— 父子、兄弟、相邻节点定位方式详解</a></li>
+<li><a href="https://www.cnblogs.com/hanmk/p/8215809.html" target="_blank" rel="noopener">selenium —— 上传文件处理标签被隐藏</a></li>
+</ul>
+<ul>
+<li><strong>xpath语法总结</strong></li>
+</ul>
+<ul>
+<li>XPath 轴</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>轴名称</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ancestor</td>
+<td>选取当前节点的所有先辈（父、祖父等）。</td>
+</tr>
+<tr>
+<td>ancestor-or-self</td>
+<td>选取当前节点的所有先辈（父、祖父等）以及当前节点本身。</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>选取当前节点的所有属性。</td>
+</tr>
+<tr>
+<td>child</td>
+<td>选取当前节点的所有子元素。</td>
+</tr>
+<tr>
+<td>descendant</td>
+<td>选取当前节点的所有后代元素（子、孙等）。</td>
+</tr>
+<tr>
+<td>descendant-or-self</td>
+<td>选取当前节点的所有后代元素（子、孙等）以及当前节点本身。</td>
+</tr>
+<tr>
+<td>following</td>
+<td>选取文档中当前节点的结束标签之后的所有节点。</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>选取当前节点的所有命名空间节点。</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>选取当前节点的父节点。</td>
+</tr>
+<tr>
+<td>preceding</td>
+<td>选取文档中当前节点的开始标签之前的所有节点。</td>
+</tr>
+<tr>
+<td>preceding-sibling</td>
+<td>选取当前节点之前的所有同级节点。</td>
+</tr>
+<tr>
+<td>self</td>
+<td>选取当前节点。</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>实例</strong></em><br>| 例子                   | 结果                                                               |<br>| ———————- | —————————————————————— |<br>| child::book            | 选取所有属于当前节点的子元素的 book 节点。                         |<br>| attribute::lang        | 选取当前节点的 lang 属性。                                         |<br>| child:: <em>              | 选取当前节点的所有子元素。                                         |<br>| attribute:: </em>          | 选取当前节点的所有属性。                                           |<br>| child::text()          | 选取当前节点的所有文本子节点。                                     |<br>| child::node()          | 选取当前节点的所有子节点。                                         |<br>| descendant::book       | 选取当前节点的所有 book 后代。                                     |<br>| ancestor::book         | 选择当前节点的所有 book 先辈。                                     |<br>| ancestor-or-self::book | 选取当前节点的所有 book 先辈以及当前节点（如果此节点是 book 节点） |<br>| child:: */child::price | 选取当前节点的所有 price 孙节点。                                  |</p>
+<ul>
+<li><em>Xpath 语法</em></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Column A</th>
+<th>Column B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodename</td>
+<td>选取此节点的所有子节点。</td>
+</tr>
+<tr>
+<td>/</td>
+<td>从根节点选取。</td>
+</tr>
+<tr>
+<td>//</td>
+<td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>选取当前节点。</td>
+</tr>
+<tr>
+<td>..</td>
+<td>选取当前节点的父节点。</td>
+</tr>
+<tr>
+<td>@</td>
+<td>选取属性</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>xpath 一些函数和例子</em></li>
+</ul>
+<p><strong>html实例</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;建立测试网址文本&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;content&quot; version=&quot;1.0&quot;&gt;</span><br><span class="line">    &lt;ul id=&quot;useful&quot;&gt;</span><br><span class="line">        &lt;li&gt;数学建模方法&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;数学建模数据&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;数学建模软件&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;ul id=&quot;useless&quot;&gt;</span><br><span class="line">        &lt;li&gt;不需要的信息１&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;不需要的信息２&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;不需要的信息３&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">     &lt;book&gt;</span><br><span class="line">        &lt;title lang=&quot;eng&quot;&gt;数学建模书籍1&lt;/title&gt;</span><br><span class="line">        &lt;price&gt;29.99&lt;/price&gt;</span><br><span class="line">    &lt;/book&gt;</span><br><span class="line">    &lt;book&gt;</span><br><span class="line">        &lt;title lang=&quot;eng&quot;&gt;数学建模书籍2&lt;/title&gt;</span><br><span class="line">        &lt;price&gt;39.95&lt;/price&gt;</span><br><span class="line">     &lt;/book&gt;</span><br><span class="line">    &lt;div id=&quot;url&quot;&gt;</span><br><span class="line">        &lt;a href=&quot;http:nveyun.com&quot;&gt;虐云建模网&lt;/a&gt;</span><br><span class="line">        &lt;a href=&quot;http://nveyun.com/forum.php&quot; title=&quot;虐云建模论坛&quot;&gt;建模论坛&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p><em>代码片段</em>：<br>[last()-1]：表示选择的倒数第二个book子元素<br>book_last=selector.xpath(‘//book[last()]/title[@lang=”eng”]/text()’)<br>[position()&lt; 3] ：表示选择前两个book子元素<br>book_p=selector.xpath(‘//book[position()&lt; 3]/title[@lang=”eng”]/text()’)<br>//title[@lang] ：表示选择所有具有lang属性的title节点<br>lang=selector.xpath(‘//title[@lang]/text()’)<br>运算符：and 和 or   [@class=’a’  or @class=’b’]<br>部分匹配可以用contains</p>
 
       
     </div>
@@ -486,14 +598,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
-            <a href="/tags/shell/" rel="tag"># shell</a>
-          
-        </div>
       
 
       
@@ -524,8 +628,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/Linux-正则表达式/" rel="next" title="Linux-正则表达式">
-                <i class="fa fa-chevron-left"></i> Linux-正则表达式
+              <a href="/2019/03/25/anaconda常用指令/" rel="next" title="Anaconda 常用指令">
+                <i class="fa fa-chevron-left"></i> Anaconda 常用指令
               </a>
             
           </div>
@@ -533,10 +637,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/17/Linux-shell基础语法/" rel="prev" title="Linux-shell基础语法">
-                Linux-shell基础语法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -581,8 +681,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -732,6 +841,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM-学习和填的坑"><span class="nav-number">1.</span> <span class="nav-text">DOM 学习和填的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-操作DOM"><span class="nav-number">1.1.</span> <span class="nav-text">1. 操作DOM</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

@@ -110,22 +110,18 @@
 
 
 
-  <meta name="description" content="基础等常规shell命令">
-<meta name="keywords" content="shell">
+  <meta name="description" content="python Flask">
+<meta name="keywords" content="web 前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-shell基础语法">
-<meta property="og:url" content="https://rizhenwei.github.io/2019/03/17/Linux-shell基础语法/index.html">
+<meta property="og:title" content="快速建站框架-Flask">
+<meta property="og:url" content="https://rizhenwei.github.io/2019/03/17/Flask基础/index.html">
 <meta property="og:site_name" content="亦珍独立博客">
-<meta property="og:description" content="基础等常规shell命令">
+<meta property="og:description" content="python Flask">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://rizhenwei.github.io/2019/03/17/Linux-shell基础语法/通配符.png">
-<meta property="og:image" content="https://rizhenwei.github.io/2019/03/17/Linux-shell基础语法/转义符.png">
-<meta property="og:image" content="https://rizhenwei.github.io/2019/03/17/Linux-shell基础语法/元字符.png">
-<meta property="og:updated_time" content="2019-03-17T08:21:22.248Z">
+<meta property="og:updated_time" content="2019-04-03T12:52:50.817Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux-shell基础语法">
-<meta name="twitter:description" content="基础等常规shell命令">
-<meta name="twitter:image" content="https://rizhenwei.github.io/2019/03/17/Linux-shell基础语法/通配符.png">
+<meta name="twitter:title" content="快速建站框架-Flask">
+<meta name="twitter:description" content="python Flask">
 
 
 
@@ -134,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="https://rizhenwei.github.io/2019/03/17/Linux-shell基础语法/">
+  <link rel="canonical" href="https://rizhenwei.github.io/2019/03/17/Flask基础/">
 
 
 
@@ -144,7 +140,7 @@
   };
 </script>
 
-  <title>Linux-shell基础语法 | 亦珍独立博客</title>
+  <title>快速建站框架-Flask | 亦珍独立博客</title>
   
 
 
@@ -364,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rizhenwei.github.io/2019/03/17/Linux-shell基础语法/">
+    <link itemprop="mainEntityOfPage" href="https://rizhenwei.github.io/2019/03/17/Flask基础/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rizhen Wei">
@@ -381,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux-shell基础语法
+          <h1 class="post-title" itemprop="name headline">快速建站框架-Flask
 
               
             
@@ -407,12 +403,24 @@
                 
               
 
-              <time title="创建时间：2019-03-17 15:26:22 / 修改时间：16:21:22" itemprop="dateCreated datePublished" datetime="2019-03-17T15:26:22+08:00">2019-03-17</time>
+              <time title="创建时间：2019-03-17 13:51:19" itemprop="dateCreated datePublished" datetime="2019-03-17T13:51:19+08:00">2019-03-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-03 20:52:50" itemprop="dateModified" datetime="2019-04-03T20:52:50+08:00">2019-04-03</time>
               
             
           </span>
@@ -429,7 +437,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python/web-前端/" itemprop="url" rel="index"><span itemprop="name">web 前端</span></a></span>
 
                 
                 
@@ -449,7 +464,7 @@
           
 
           
-              <div class="post-description">基础等常规shell命令</div>
+              <div class="post-description">python Flask</div>
           
 
         </div>
@@ -465,56 +480,87 @@
       
 
       
-        <h2 id="一、变量"><a href="#一、变量" class="headerlink" title="一、变量"></a>一、变量</h2><blockquote>
-<p>环境变量： </p>
-</blockquote>
-<p>env 命令可以查看shell下的所有环境变量， 常用的环境变量有:</p>
-<ul>
-<li>HOME: 用户主文件夹</li>
-<li>SHELL: shell使用的是哪一个程序</li>
-<li>HISTSIZE: 是历史命令记录条数有关。 默认是1000</li>
-<li>MAIL:用户取用的mailbox位置</li>
-<li>PATA:执行文件查找的路径</li>
-<li>INPUTRC:与按键功能有关， 可以设置特殊案件</li>
-<li>LANG: 语系数据， 终端显示乱码的时候需要调试（不同语系造成）， 修改方法, 先查看支持多少种语系， 命令 locale –a查找后， 在执行locale 命令进行相应的修改</li>
+        <h1 id="快速建站框架-Flask"><a href="#快速建站框架-Flask" class="headerlink" title="快速建站框架-Flask"></a>快速建站框架-Flask</h1><h2 id="Flask-基本要点"><a href="#Flask-基本要点" class="headerlink" title="Flask 基本要点"></a>Flask 基本要点</h2><ul>
+<li>主要用于微小项目，无需安装其他服务器如:Tomcat 、 Apache</li>
+<li>提供python单元测试框架unitest接口</li>
+<li>Flask的socket是基于Werkzeug 实现的，模板语言依赖jinja2模板</li>
+<li>可用插件较多，<a href="http://flask.pocoo.org/extensions/" target="_blank" rel="noopener">插件地址</a></li>
 </ul>
+<h2 id="第一个-hello-word"><a href="#第一个-hello-word" class="headerlink" title="第一个 hello word"></a>第一个 hello word</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app=Flask(__name__,template_folder=<span class="string">'templates'</span>,static_url_path=<span class="string">'/static/'</span>,static_path=<span class="string">'/zhanggen'</span>) <span class="comment">#创建1个Flask实例</span></span><br><span class="line"><span class="meta">@app.route('/')      #路由系统生成 视图对应url,1. decorator=app.route() 2. decorator(first_flask)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">first_flask</span><span class="params">()</span>:</span>    <span class="comment">#视图函数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span>  <span class="comment">#response</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()              <span class="comment">#启动socket</span></span><br></pre></td></tr></table></figure>
+<h3 id="1、-配置文件"><a href="#1、-配置文件" class="headerlink" title="1、 配置文件"></a>1、 配置文件</h3><p><code>app=Flask(__name__,template_folder=&#39;templates&#39;,static_url_path=&#39;/static/&#39;,static_path=&#39;/zhanggen&#39;)</code></p>
+<ul>
+<li>模板路径： template_folder=’templates’</li>
+<li>静态文件路径：static_url_path=’/static/‘</li>
+<li>静态文件引入别名：static_path=’/zhanggen’</li>
+<li>设置为调试环境：app.debug=True （代码修改自动更新）</li>
+<li>设置json编码格式 如果为False 就不使用ascii编码：app.config[‘JSON_AS_ASCII’]=False</li>
+<li>设置响应头信息Content-Type   app.config[‘JSONIFY_MIMETYPE’] =”application/json;charset=utf-8”  </li>
+</ul>
+<h3 id="2、路由系统"><a href="#2、路由系统" class="headerlink" title="2、路由系统"></a>2、路由系统</h3><p><strong>动态路由（url传参）</strong><br><em>视图必须有对应接收参数</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> @app.route(<span class="string">'/user/&lt;name&gt;'</span>)  <span class="comment">#接收输入参数</span></span><br><span class="line"><span class="number">2.</span> @app.route(<span class="string">'/post/&lt;int:age&gt;'</span>)  <span class="comment">#接收整型数字参数</span></span><br><span class="line"><span class="number">3.</span> @app.route(<span class="string">'/post/&lt;float:salary&gt;'</span>) <span class="comment">#接收浮点型数字参数</span></span><br><span class="line"><span class="number">4.</span> @app.route(<span class="string">'/post/&lt;path:path&gt;'</span>) <span class="comment"># 接收URL链接类型参数</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>指定允许的请求方法</strong><br><a href="mailto:`@app.route" target="_blank" rel="noopener">`@app.route</a>(‘/login’, methods=[‘GET’, ‘POST’])`</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">app=Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/&lt;path:url&gt;/',methods=['get']) #只允许get请求</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">first_flask</span><span class="params">(url)</span>:</span></span><br><span class="line">    print(url)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span>  <span class="comment">#response</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+<p><strong>通过别名反向生成url</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask,url_for</span><br><span class="line">app=Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/&lt;path:url&gt;',endpoint='name1')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">first_flask</span><span class="params">(url)</span>:</span></span><br><span class="line">    print(url_for(<span class="string">'name1'</span>,url=url)) <span class="comment">#如果设置了url参数，url_for（别名,加参数）</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
+<p><strong>通过app.add_url_rule()调用路由</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app=Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">first_flask</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span> </span><br><span class="line"></span><br><span class="line">app.add_url_rule(rule=<span class="string">'/index/'</span>,endpoint=<span class="string">'name1'</span>,view_func=first_flask,methods=[<span class="string">'GET'</span>])</span><br><span class="line"><span class="comment">#app.add_url_rule(rule=访问的url,endpoint=路由别名,view_func=视图名称,methods=[允许访问的方法])</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></p>
+<h3 id="3、视图"><a href="#3、视图" class="headerlink" title="3、视图"></a>3、视图</h3><p><strong>给Flask视图函数加装饰器</strong></p>
 <blockquote>
-<p>Linux Shell 通配符、 转义字符、 元字符、 特殊字符</p>
+<p><a href="https://www.cnblogs.com/cicaday/p/python-decorator.html" target="_blank" rel="noopener">python装饰器的作用就是为已经存在的函数或对象添加额外的功能</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1、定义1个装饰器</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">auth</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">'我在上面'</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(*args,**kwargs)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> func(*args,**kwargs)</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app=Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/',methods=['GET'])</span></span><br><span class="line"><span class="meta">@auth #注意如果要给视图函数加装饰器，一点要加在路由装饰器下面，才会被路由装饰器装饰</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">first_flask</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'ffff'</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p><strong>通配符</strong><br><img src="/2019/03/17/Linux-shell基础语法/通配符.png" alt="通配符"><br><strong>转义符</strong><br><img src="/2019/03/17/Linux-shell基础语法/转义符.png" alt="转义符"><br><strong>转义符</strong><br><img src="/2019/03/17/Linux-shell基础语法/元字符.png" alt="元字符"></p>
-<blockquote>
-<p>常用的一些命令</p>
-</blockquote>
-<p><strong>打印和设值： </strong><br>变量显示 echo 要在变量前加上’’<br>变量设置： unset 或用“=”连接， 用“”或转译符“\”号保持特殊字符原特性；<br>如果要在其他子程序中使用， 要增加export 使得他变为环境变量；<br><strong>变量有效范围： </strong><br>局部变量=自定义变量；<br>全局变量=环境变量， 可以被子进程引用<br>read： 读取来自键盘的输入变量<br>declare： 申明变量类型  常用的有“整数数字”“字符串”-默认、 “只读类型”、 “环境变量”、 “数组”——读取方式 ${数组}<br><strong>变量删除、 替换</strong>： </p>
+<p><strong>request和response</strong></p>
 <ul>
-<li>删除</li>
+<li>a.请求相关信息</li>
 </ul>
-<p>‘#’:从前边开始删除变量内容, 仅仅删除符合替换文字最短的那个<br>‘##’:从前边开始删除变量内容, 仅仅删除符合替换文字最短的那个<br>%:从后面向前删除<br>表达方式： echo ${path#/<em>xxx}  其中</em>xxx是被删除部分</p>
-<ul>
-<li>替换</li>
-</ul>
-<p><code>`auto默认值替换， 如果变量$var没有定义， 则整体值为default字符串， 但var变量本身并没有被设置${var-default}        // 如果var定义了， 但为空， 则还使用$var， 即为空auto`</code></p>
-<p><code>`auto${var:-default}          //如果var定义了， 但为空， 则使用default字符串, 默认值设置， 包含默认值替换的所有功能（标准输出一样）， 不同在于， 如果变量$var没有定义， 则在输出default字符串的同时， $var也被设置成default字符串auto`</code><br> <code>${var=default}           //如果var定义了， 但为空， 则还使用$var， 即为空</code> </p>
-<p> <code>${var:=default}           //如果var定义了， 但为空， 则将$var设置成default字符串</code> <strong><br>定向输入， 输出： </strong><br>    ‘&gt;&gt;’: 定向输出到指定文件 对标准错误定向输出， 要把准备定向文件的描述符编号放在 &gt; 操作符之前。 例如 kill– l 1234 &gt; /dev/null<br>2 &gt; &amp; l 放到回收站 “&lt;&lt;”: 定向标准输入 <strong><br>    管道： </strong><br>    linux 可以通过管道连接进程， 之间的数据流可以协调<br>ps– xo coom | sort | uniq | grep– v sh | more<br><code>`auto字符串、 环境变量、 参数变量： 字符串有空格要用引号括起来， 等号两边没有空格$HOME    //当前用户主目录$PATH    //用分隔号分开的用来收索的目录  $#        //传递给脚本参数的个数$1, $2..    //脚本程序的参数auto`</code></p>
-<h2 id="二、数据流定向"><a href="#二、数据流定向" class="headerlink" title="二、数据流定向"></a>二、数据流定向</h2><blockquote>
-<p>：以覆盖的方法将『正确的数据』输出到指定的文件或装置上<br>1&gt; ：以覆盖的方法将『正确的数据』输出到指定的文件或装置上<br>1&gt;&gt;：以累加的方法将『正确的数据』输出到指定的文件或装置上<br>2&gt; ：以覆盖的方法将『错误的数据』输出到指定的文件或装置上<br>2&gt;&gt;：以累加的方法将『错误的数据』输出到指定的文件或装置上<br>2&gt;&amp; 1：将正确和错误的数据全部写入到指定文件或装置上</p>
-</blockquote>
-<p>&lt;：将原本需要由键盘输入的数据，改由文件内容来取代<br>&lt;&lt;：代表的是『结束的输入字符』<br>&lt;&lt;&lt;:将字符串重定向到stdin。</p>
-<p>例子：<br>find /home –name testing &gt;t1.txt 2&gt;t2.txt  将正确输出和错误输出存放在不同文件<br>find /home –name testing &gt;t1.txt 2&gt;&amp;1  将正确输出和错误输出存放在t1.txt同文件</p>
-<p><strong>命令执行判断依据</strong><br>命令执行判断依据–;,&amp;&amp;,||<br>在Linux运维过程中或者日常Linux系统操作过程中会同时执行多条命令，这样的话需要通过我们的多重命令方式进行处理。<br>1.<br>通过使用’;’分号执行多个命令，如例：<br><code>#sync;sync;shutdown -h now</code><br>2.<br>通过判断执行命令，&amp;&amp;/||执行情况 如例:<br><strong><code>cmd1&amp;&amp;cmd2:</code></strong><br><em><code>若cmd1执行完毕且正确执行($?=0),则开始执行cmd2
-若cmd1执行完毕且错误执行($?!=0),则开cmd2不执行</code></em><br><strong><code>cmd1||cmd2:</code></strong><br><em><code>若cmd1执行完毕后正确执行($?=0),则cmd2不执行。
-若cmd1执行完毕后为错误($?!=0),则开始只执行cmd2</code></em></p>
-<p><strong>管道：</strong><br>linux 可以通过管道连接进程，之间的数据流可以协调<br><code>ps –xo coom | sort |uniq | grep –v sh |more</code></p>
-<ul>
-<li><p>1）管道命令仅为处理标准输出（即正确的输出），对于标准错误输出，将忽略</p>
+<ol>
+<li><p>request.method： 获取请求方法</p>
 </li>
-<li><p>2）管理命令的后一个命令必须能将前一个命令的标准输出变为它的标准输入才可以，如less,more,head,tail就可以，而ls, cp, mv就不行。</p>
+<li><p>request.json</p>
 </li>
+<li><p>request.json.get(“json_key”)：获取json数据 **较常用      </p>
+</li>
+<li><p>request.argsget(‘name’) ：获取get请求参数   </p>
+</li>
+<li><p>request.form.get(‘name’) ：获取POST请求参数</p>
+</li>
+<li><p>request.form.getlist(‘name_list’)：获取POST请求参数列表（多个）</p>
+</li>
+<li><p>request.values.get(‘age’) ：获取GET和POST请求携带的所有参数（GET/POST通用）</p>
+</li>
+<li><p>request.cookies.get(‘name’)：获取cookies信息</p>
+</li>
+<li><p>request.headers.get(‘Host’)：获取请求头相关信息</p>
+</li>
+<li><p>request.path：获取用户访问的url地址，例如（/，/login/，/ index/）；</p>
+</li>
+<li><p>request.full_path：获取用户访问的完整url地址+参数 例如(/login/?age=18)</p>
+</li>
+<li><p>request.script_root： 抱歉，暂未理解其含义；</p>
+</li>
+<li><p>request.url：获取访问url地址，例如<a href="http://127.0.0.1:5000/?age=18；" target="_blank" rel="noopener">http://127.0.0.1:5000/?age=18；</a></p>
+</li>
+<li><p>request.base_url：获取访问url地址，例如 <a href="http://127.0.0.1:5000/；" target="_blank" rel="noopener">http://127.0.0.1:5000/；</a></p>
+</li>
+<li><p>request.url_root</p>
+</li>
+<li><p>request.host_url</p>
+</li>
+<li><p>request.host：获取主机地址 </p>
+</li>
+<li><p>request.files：获取用户上传的文件</p>
+</li>
+<li><p>obj = request.files[‘the_file_name’]</p>
+</li>
+<li><p>obj.save(‘/var/www/uploads/‘ + secure_filename(f.filename))  直接保存</p>
+<ul>
+<li>b、响应相关信息</li>
 </ul>
-<p><strong>选取命令</strong><br>cut - 列选取命令<br>cut -d ‘分隔字符’ -f 选取的列数<br><code>echo $PATH|cut -d &#39;:&#39; -f 3,5</code>  –选取第3列和第5列<br>grep - 行选取命令<br>grep分一行数据，若当中有我们所需要的信息，则显示该行，否则忽略。<br>grep [-cinv] ‘查找的字符串’ filename<br>-c：计算找到的次数<br>-i：忽略大小写<br>-v：反向选择<br>-n：输出第几行</p>
-<p><code>grep [-acivn] [--color=auto]</code> ’查找字符串‘ filename<br>-a: 将binary文件以test文件的方式查找数据；-c:计算找到’查找字符串’的次数；-i：忽略大小写的不同，所以大小写视为相同；-n：顺便输出行号；-v:反向选择，即显示出没有‘查找字符串’内容的一行；–color=auto:可以将找到的关键字部分加上颜色显示<br> <code>last | grep -v &#39;root&#39; | cut -d &#39; &#39; -f1</code><br> <code>grep --color=auto &#39;MANPATH&#39; /etc/man.config</code><br>排序命令：sort:依据不同的数据类型进行排序,wc：统计,uniq:重复的数据仅列出一个<br>sort: 使用LANG=C让语系统一，数据排序比较好一点<br><code>sort [-fbMnrtuk] [file or stdin]</code><br>参数：<br>-f : 忽略大小写；-b ：忽略最前面；-M ：以月份的名字来排序；-n ：使用“纯数字”进行排序；-r：反向排序；-u： 就是uniq,相同的数据中，仅出现一行代表；-t：分隔符，默认[tab]键来分隔； -k ：以那个区间（field）来进行排序的意思<br><code>cat /etc/passwd | sort ; cat /etc/passwd | sort -t &#39;:&#39; -k 3 ; last | cut -d &#39; &#39; -f1 | sort uniq [-ic]</code><br>参数：<br>-i：忽略大小写字符的不同； -c：进行计数<br><code>last | cut -d &#39; &#39; -f1 |sort|uniq -c</code><br><code>wc [-lwm]</code><br>参数：<br>-l ： 仅列出行；-w ：仅列出多少字（英文单字）；-m ：仅列出字符<br>last可以输出登陆者，但最后两行并非账号内容。取得月份登陆系统的总人数<br><code>last | grep [a-zA-Z]|grep -v wtmp|wc -l</code><br><code>last | tee last.list | cut -d &quot; &quot; -f1        ;   ls -l | tee -a ~/homefile |more</code>   (-a,将信息累加而不是覆盖）<br>字符转换命令： tr,col,join,paste,epand<br>tr:可以用来删除一段信息当中的文字，或者进行文字信息替换<br>tr [-ds] SET1 …<br>参数：<br>-d:删除信息当中的SET1Z这个字符串；-s：替换掉重复字符串<br><code>last | tr &#39;[a-z]&#39; &#39;[A-Z]&#39;</code><br><code>cat /etc/passwd | tr -d &#39;:&#39;</code>  将：删除<br><code>cp /etc/passwd /root/passwd &amp;&amp; UNIX2dos /root/passwd</code><br><code>file /etc/passwd /root/passwd</code><br><code>col [-xb]</code><br>参数：<br>-x:将tab键转换成对等的看空格键；-b ：在文字内有反斜杠（/）时，仅保留反斜杠最后接的那个字符<br>例如：cat -A 显示所有特殊按钮，最后以col将[tab]转为空白<br><code>cat -A /etc/man.conf</code>    &lt;==此时看到很多^I的符号，那就是tab<br><code>cat /etc/man.config | col -x | cat -A | more</code>      [tab]键会转为空格键<br>join  加入/参加   在处理两个文件之间的数据。将两个文件当中的相同数据那一行加在一起。<br><code>join [-ti12] file1 file2</code><br>参数：<br> -t : join默认以空格符分隔数据，并且对比“第一个字段”的数据；-i: 默认忽略大小写 ； -1 ：代表第一个文件要用哪个字段分析的意思 ； -2 ：代表第二个字段用哪个字段来分析<br>[root@master ssh]# join -t ‘:’ /etc/passwd /etc/shadow<br> paste [-d] file1 file2  直接将两行粘在一起，且中间以[tab]隔开<br> 参数：<br> -d : 后面可以接分隔符，默认以tab来分隔；- ： 如果file部分写成- ，表示来自shandard input 的数据的意思<br>[root@master ssh]# <code>paste /etc/passwd /etc/shadow</code><br><code>expand [-t] file</code>  将[tab]键转成空格<br><code>grep &quot;^MANPATH&quot; /etc/man.config |head -n 3 | expand -t 6 - | cat -A</code><br>切割命令 split    大文件切割成小文件<br><code>split [-bl] file PREFI</code></p>
-<p>-b ：后面可接欲切割的文件大小，可加单位 例如：b,k,m等；    -l ：以行数来进行切割；<br><code>cd /tmp ; split -b 300k /etc/termcap termcap  ;  ll -k trmcap*</code><br>参数代换： xargs [-0epn] command<br>参数：<br>-0 ： 如果输入stdin含有特殊字符，例如<code>,/ 空格字符时，这个参数可以将它还原成一般符号； -e :EOF，后面接一个字符串，xargs分析到这个字符串时，就会停止工作； -p ： 在执行每个命令的参数时，都会询问用户的意思；-n ：后面接次数，诶次command命令都会执行。
-找出具有特殊权限的文件名</code>find /sbin -perm +7000 |ls -l`</p>
+</li>
+<li><p>return “字符串” ：响应字符串</p>
+</li>
+<li><p>return render_template(‘html模板路径’,**{})：响应模板</p>
+</li>
+<li><p>return redirect(‘/index.html’)：跳转页面</p>
+</li>
+</ol>
 
       
     </div>
@@ -538,9 +584,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
-            <a href="/tags/shell/" rel="tag"># shell</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -573,8 +617,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/Linux-文件权限和目录配置/" rel="next" title="Linux-文件权限和目录配置">
-                <i class="fa fa-chevron-left"></i> Linux-文件权限和目录配置
+              <a href="/2019/03/17/容器生态系统/" rel="next" title="容器生态系统">
+                <i class="fa fa-chevron-left"></i> 容器生态系统
               </a>
             
           </div>
@@ -583,8 +627,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/24/性能测试-Jmeter工具基本使用/" rel="prev" title="性能测试-Jmeter工具基本使用">
-                性能测试-Jmeter工具基本使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/17/容器架构/" rel="prev" title="容器架构">
+                容器架构 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -801,7 +845,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、变量"><span class="nav-number">1.</span> <span class="nav-text">一、变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、数据流定向"><span class="nav-number">2.</span> <span class="nav-text">二、数据流定向</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#快速建站框架-Flask"><span class="nav-number">1.</span> <span class="nav-text">快速建站框架-Flask</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Flask-基本要点"><span class="nav-number">1.1.</span> <span class="nav-text">Flask 基本要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一个-hello-word"><span class="nav-number">1.2.</span> <span class="nav-text">第一个 hello word</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、-配置文件"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、路由系统"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、路由系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、视图"><span class="nav-number">1.2.3.</span> <span class="nav-text">3、视图</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
