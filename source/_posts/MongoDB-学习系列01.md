@@ -6,7 +6,7 @@ categories:
     - MongoDB
 tags:
 series:
-description: MongoDB学习系列01
+description: MongoDB介绍和基本特性
 keywords: 
 - MongoDB
 - 数据库
