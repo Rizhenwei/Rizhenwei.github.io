@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rizhenwei.github.io/"/>
-  <updated>2019-04-03T12:52:50.840Z</updated>
+  <updated>2019-05-14T14:02:05.929Z</updated>
   <id>https://rizhenwei.github.io/</id>
   
   <author>
@@ -17,21 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Anaconda 常用指令</title>
-    <link href="https://rizhenwei.github.io/2019/03/25/anaconda%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
-    <id>https://rizhenwei.github.io/2019/03/25/anaconda常用指令/</id>
-    <published>2019-03-25T13:40:30.000Z</published>
-    <updated>2019-04-03T12:52:50.840Z</updated>
+    <title>记录一次被虐的面试</title>
+    <link href="https://rizhenwei.github.io/2019/04/24/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E8%A2%AB%E8%99%90%E7%9A%84%E9%9D%A2%E8%AF%95/"/>
+    <id>https://rizhenwei.github.io/2019/04/24/记录一次被虐的面试/</id>
+    <published>2019-04-24T12:13:50.000Z</published>
+    <updated>2019-05-14T14:02:05.929Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Anaconda-常用指令"><a href="#Anaconda-常用指令" class="headerlink" title="Anaconda 常用指令"></a>Anaconda 常用指令</h1><blockquote><p>tip python 环境管理<br><a href="https://www.anaconda.com/distribution/" target="_blank" rel="noopener">官网下载地址</a></p></blockquote><ol><li>查看安装的版本：  <code>conda --version</code></li><li>更新所有工具包：   <code>conda upgrade --all</code></li><li>激活默认虚拟环境：     <code>activate</code>, 默认为base环境，激活特定环境 <code>activate env_name</code></li><li>创建一个虚拟环境：  <code>conda create -n env_name python=3</code>，指定python版本为3的env_name环境</li><li>安装第三方包： <code>conda install requests</code> 或 <code>pip install requests</code></li><li>卸载第三方包：<code>conda remove requests</code> 或 <code>pip uninstall requests</code></li><li>查看环境安装了那些包： <code>conda list</code></li><li>导出环境：<code>conda env export &gt;env.yaml</code></li><li>导入环境： <code>conda env create -f env.yml</code></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="面试复盘"><a href="#面试复盘" class="headerlink" title="面试复盘"></a>面试复盘</h1><h2 id="为嘛去面试、面试前的准备"><a href="#为嘛去面试、面试前的准备" class="headerlink" title="为嘛去面试、面试前的准备"></a>为嘛去面试、面试前的准备</h2><ul><li>企业背景：Shopee、岗位：供应链高级测试工程师，之前听说过这个公司，有 HR 主动联系，然后就尝试投了一下简历，ps 简历很久之前的都没有改过，简历太简单没什么出彩的东西</li><li>面试准备：就没有怎么准备其实，就是去去面试前的一两天看了网上的面试技巧、临时抱佛脚；看了 linux、操作系统、python、数据库等基本的知识，属于就知道皮毛，太久不学习了原来记得的都忘记了</li><li>为嘛去面试：觉得现在的工作内容太简单了，没什么成长空间，想要学新的东西，没有什么契机，对自己的薪酬也不是很满意，有机会就看看</li></ul><h2 id="面试流程"><a href="#面试流程" class="headerlink" title="面试流程"></a>面试流程</h2><p>说面试流程感觉都不太合理，提前 HR 打电话约面试时间，通知时间后按时到公司前台签到，等面试管过来面试就 ok 了，自己太菜了，一面就挂的死死的，就没有后面的什么了，一面是技术面，真的是什么都问，面试了大概 2 个小时</p><h2 id="面试相关的题目"><a href="#面试相关的题目" class="headerlink" title="面试相关的题目"></a>面试相关的题目</h2><h3 id="1-测试的系统框架、相关联的其他系统实现原理"><a href="#1-测试的系统框架、相关联的其他系统实现原理" class="headerlink" title="1. 测试的系统框架、相关联的其他系统实现原理"></a>1. 测试的系统框架、相关联的其他系统实现原理</h3><p>自己测试的系统太简单了，就不讲了，问了：存储系统的实现、自动构建发布整个流程、dockerfile 怎么维护的</p><h3 id="2-测试理论、方法、按照其中一个方法设计测试用例"><a href="#2-测试理论、方法、按照其中一个方法设计测试用例" class="headerlink" title="2. 测试理论、方法、按照其中一个方法设计测试用例"></a>2. 测试理论、方法、按照其中一个方法设计测试用例</h3><p><a href="https://blog.csdn.net/KLsmile/article/details/79429038#" target="_blank" rel="noopener">测试用例设计方法</a></p><h3 id="3-数据库索引区别，什么是最左原则，索引优缺点，现在写索引，判断索引的合理性"><a href="#3-数据库索引区别，什么是最左原则，索引优缺点，现在写索引，判断索引的合理性" class="headerlink" title="3. 数据库索引区别，什么是最左原则，索引优缺点，现在写索引，判断索引的合理性"></a>3. 数据库索引区别，什么是最左原则，索引优缺点，现在写索引，判断索引的合理性</h3><p><a href="https://blog.csdn.net/sinat_39587248/article/details/80521068" target="_blank" rel="noopener">数据库索引-基本介绍</a><br><a href="http://blog.codinglabs.org/articles/theory-of-mysql-index.html" target="_blank" rel="noopener">数据库索引-实现原理</a><br><a href="https://blog.csdn.net/timer_gao/article/details/78013826" target="_blank" rel="noopener">https://blog.csdn.net/timer_gao/article/details/78013826</a></p><h3 id="4-数据库查询语句，复杂查询"><a href="#4-数据库查询语句，复杂查询" class="headerlink" title="4. 数据库查询语句，复杂查询"></a>4. 数据库查询语句，复杂查询</h3><h3 id="5-数据库存储原理"><a href="#5-数据库存储原理" class="headerlink" title="5. 数据库存储原理"></a>5. 数据库存储原理</h3><h3 id="6-数据库锁类型和对应的机制"><a href="#6-数据库锁类型和对应的机制" class="headerlink" title="6. 数据库锁类型和对应的机制"></a>6. 数据库锁类型和对应的机制</h3><h3 id="7-http-和-https-差别，https-不同版本差别，http-ssl-之间的调用过程"><a href="#7-http-和-https-差别，https-不同版本差别，http-ssl-之间的调用过程" class="headerlink" title="7. http 和 https 差别，https 不同版本差别，http ssl 之间的调用过程"></a>7. http 和 https 差别，https 不同版本差别，http ssl 之间的调用过程</h3><h3 id="8-tcp-的原理，如何保证数据发送安全性，tcp-阻塞的机制"><a href="#8-tcp-的原理，如何保证数据发送安全性，tcp-阻塞的机制" class="headerlink" title="8. tcp 的原理，如何保证数据发送安全性，tcp 阻塞的机制"></a>8. tcp 的原理，如何保证数据发送安全性，tcp 阻塞的机制</h3><h3 id="9-python-classmethod-staticmethod-区别，-args-和-kwargs-差别"><a href="#9-python-classmethod-staticmethod-区别，-args-和-kwargs-差别" class="headerlink" title="9. python @classmethod @staticmethod 区别，*args 和**kwargs 差别"></a>9. python @classmethod @staticmethod 区别，*args 和**kwargs 差别</h3><h3 id="10-python-不同线程通信，进程处理"><a href="#10-python-不同线程通信，进程处理" class="headerlink" title="10. python 不同线程通信，进程处理"></a>10. python 不同线程通信，进程处理</h3><h3 id="11-python-内存机制，垃圾如何回收"><a href="#11-python-内存机制，垃圾如何回收" class="headerlink" title="11. python 内存机制，垃圾如何回收"></a>11. python 内存机制，垃圾如何回收</h3><h3 id="12-python-常用排序算法实现"><a href="#12-python-常用排序算法实现" class="headerlink" title="12. python 常用排序算法实现"></a>12. python 常用排序算法实现</h3>]]></content>
     
     <summary type="html">
     
-      Anaconda 常用指令
+      被问蒙了的一次面试
     
     </summary>
     
-      <category term="python" scheme="https://rizhenwei.github.io/categories/python/"/>
+      <category term="面试" scheme="https://rizhenwei.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>学习系列02</title>
+    <link href="https://rizhenwei.github.io/2019/04/11/MongoDB%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%9702/"/>
+    <id>https://rizhenwei.github.io/2019/04/11/MongoDB学习系列02/</id>
+    <published>2019-04-11T14:46:42.000Z</published>
+    <updated>2019-05-14T14:06:51.665Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
     
     
   </entry>
@@ -54,6 +68,26 @@
       <category term="数据库" scheme="https://rizhenwei.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
       <category term="MongoDB" scheme="https://rizhenwei.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda 常用指令</title>
+    <link href="https://rizhenwei.github.io/2019/03/25/anaconda%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+    <id>https://rizhenwei.github.io/2019/03/25/anaconda常用指令/</id>
+    <published>2019-03-25T13:40:30.000Z</published>
+    <updated>2019-04-03T12:52:50.840Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Anaconda-常用指令"><a href="#Anaconda-常用指令" class="headerlink" title="Anaconda 常用指令"></a>Anaconda 常用指令</h1><blockquote><p>tip python 环境管理<br><a href="https://www.anaconda.com/distribution/" target="_blank" rel="noopener">官网下载地址</a></p></blockquote><ol><li>查看安装的版本：  <code>conda --version</code></li><li>更新所有工具包：   <code>conda upgrade --all</code></li><li>激活默认虚拟环境：     <code>activate</code>, 默认为base环境，激活特定环境 <code>activate env_name</code></li><li>创建一个虚拟环境：  <code>conda create -n env_name python=3</code>，指定python版本为3的env_name环境</li><li>安装第三方包： <code>conda install requests</code> 或 <code>pip install requests</code></li><li>卸载第三方包：<code>conda remove requests</code> 或 <code>pip uninstall requests</code></li><li>查看环境安装了那些包： <code>conda list</code></li><li>导出环境：<code>conda env export &gt;env.yaml</code></li><li>导入环境： <code>conda env create -f env.yml</code></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      Anaconda 常用指令
+    
+    </summary>
+    
+      <category term="python" scheme="https://rizhenwei.github.io/categories/python/"/>
     
     
   </entry>
